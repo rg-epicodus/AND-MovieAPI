@@ -24,7 +24,7 @@ import okhttp3.Response;
  */
 
 public class APIService {
-    public static void findMovies(String location, Callback callback) {
+    public static void findMovies(String movieTitle, Callback callback) {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .build();
@@ -49,11 +49,11 @@ public class APIService {
         try {
             String jsonData = response.body().string();
             JSONObject apiJSON = new JSONObject(jsonData);
-            JSONArray listJSON = apiJSON.getJSONArray("firstJSONName");
+            JSONArray listJSON = apiJSON.getJSONArray("results");
             for (int i = 0; i < listJSON.length(); i++) {
                 JSONObject mainJSON = listJSON.getJSONObject(i);
-                Movie forecast = new Movie();
-                movies.add(forecast);
+                Movie movie = new Movie(title, poster_path, vote_average, genre_ids, release_date, overview);
+                movies.add(movie);
             }
         }
         catch (IOException e){
