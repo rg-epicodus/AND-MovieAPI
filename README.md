@@ -35,6 +35,8 @@ Table of contents
 
 | Behavior      | Example Input         | Example Output        |
 | ------------- | ------------- | ------------- |
+| User searches for movie by title/rating/release date | X-Men or R or 01-01-2017 | List of Movies displayed |
+| User clicks on movie item in list | X-Men | Details of movie displayed |
 | User clicks actors name and gets a list of movies they are in | LIam Neeson | Star Wars, Taken, Schindler's List|
 | User can send text message to another person via contacts with note and included info about movie | Click movie and share via contacts with added note" | "Evan would like to see Movie X with you" |
 | User clicks a button to view information on a movie | buttonClick  | Movie Detail displayed  |
