@@ -35,11 +35,13 @@ Table of contents
 
 | Behavior      | Example Input         | Example Output        |
 | ------------- | ------------- | ------------- |
-|  User clicks a button to view information on a movie | buttonClick  | Movie Detail displayed  |
+| User clicks actors name and gets a list of movies they are in | LIam Neeson | Star Wars, Taken, Schindler's List|
+| User can send text message to another person via contacts with note and included info about movie | Click movie and share via contacts with added note" | "Evan would like to see Movie X with you" |
+| User clicks a button to view information on a movie | buttonClick  | Movie Detail displayed  |
 
 
 ## Known Bugs
-* Contact Rich Garrick at <richg341@gmail.com>
+* Contact Rich Garrick at <richg341@gmail.com> Evan Johnson <evanrjonso@gmail.com>
 
 ## Contributing
 
@@ -60,7 +62,7 @@ Table of contents
 
 ## License
 The MIT License (MIT)
-Copyright 2017 Rich Garrick
+Copyright 2017 Rich Garrick & Evan Johnson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
