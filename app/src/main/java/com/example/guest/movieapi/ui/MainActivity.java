@@ -12,9 +12,9 @@ import com.example.guest.movieapi.R;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
-    @Bind(R.id.showByMoviesButton) Button mShowByMoviesButton;
-    @Bind(R.id.movieTitleEditText) EditText mMovieTitleEditText;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    @Bind(R.id.button) Button mButton;
+    @Bind(R.id.editText) EditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +22,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mShowByMoviesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String movieTitle = mMovieTitleEditText.getText().toString();
-                Intent intent = new Intent(MainActivity.this, MovieListActivity.class);
-                intent.putExtra("movieTitle", movieTitle);
-                startActivity(intent);
-            }
-        });
+        mButton.setOnClickListener(this);
     }
+
+    @Override
+    public void onClick(View view) {
+        String movieTitle = mEditText.getText().toString();
+        Intent intent = new Intent(MainActivity.this, MovieListActivity.class);
+        intent.putExtra("movieTitle", movieTitle);
+        startActivity(intent);
+    }
+
 }
